@@ -1,9 +1,9 @@
 package com.umansoor.util.Version;
 
-/* 
+/** 
  * A class to represent version information. This class cannot be inherited.
- * This class is thread-safe as it is immutable and can be freely shared 
- * between threads without any external synchronization. 
+ * It is thread-safe as it is immutable and can be freely shared between threads
+ * without any external synchronization. 
  * 
  * A version object represented by this class is of the following format:
  * X.Y.Z.b
@@ -13,25 +13,25 @@ package com.umansoor.util.Version;
  * Z = Revision component of the version.
  * b = Build component of the version.
  * 
- * This is inspired from the Version class in .NET Framework 4.0.
+ * Inspired from the Version class in .NET Framework 4.0.
  * 
- * Umer Mansoor <umermk3@gmail.com>
+ * @author Umer Mansoor
  */
 public final class Version implements Comparable<Version> {
 	
-	// Represents the value of the major component of the version object.
+       /** Represents the value of the major component of the version object.*/
 	private final Integer major;
 	
-	// Represents the value of the minor component of the version object.
+	/** Represents the value of the minor component of the version object.*/
 	private final Integer minor;
 	
-	// Represents the value of the revision component of the version object.
+	/** Represents the value of the revision component of the version object.*/
 	private final Integer revision;
 	
-	// Represents the value of the build component of the version object.
+	/** Represents the value of the build component of the version object.*/
 	private final Integer build;
 	
-	/*
+	/**
 	 * Private constructor, cannot be called directly.
 	 */
 	private Version (Integer major, Integer minor, Integer revision, Integer build) {
